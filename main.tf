@@ -44,5 +44,16 @@ module "addons" {
       version          = "4.3.18"
       values           = []
     }
+
+    "cert-manager" = {
+      chart            = "cert-manager"
+      namespace        = "cert-manager"
+      create_namespace = true
+      repository       = "https://charts.jetstack.io"
+      reuse_values     = true
+      wait             = true
+      version          = "v1.15.2"
+      values           = [file(join("", [path.module, "/values/", "cert-manager-values.yaml"]))]
+    }
   }
 }

@@ -25,10 +25,11 @@ Before using this project, ensure you have the following installed:
 
 The following Kubernetes addons are installed by the Terraform scripts in this repository:
 
-- **Ingress-NGINX:** A highly customizable ingress controller for Kubernetes.
-- **RabbitMQ Cluster Operator:** An operator for managing RabbitMQ clusters in Kubernetes.
-- **Metrics Server:** Scalable and efficient source of container resource metrics for Kubernetes built-in autoscaling pipelines.
-- **Longhorn:** Cloud-Native distributed storage built on and for Kubernetes 
+- **Ingress NGINX Controller:** A highly customizable ingress controller for Kubernetes
+- **RabbitMQ Cluster Kubernetes Operator:** An operator for managing RabbitMQ clusters in Kubernetes
+- **Kubernetes Metrics Server:** Scalable and efficient source of container resource metrics for Kubernetes built-in autoscaling pipelines
+- **Longhorn:** Cloud-Native distributed storage built on and for Kubernetes
+- **cert-manager:** Automatically provision and manage TLS certificates in Kubernetes
 
 Additional addons can be included as per your cluster requirements.
 
