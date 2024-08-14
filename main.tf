@@ -22,5 +22,17 @@ module "addons" {
       version          = "3.12.1"
       values           = [file(join("", [path.module, "/values/", "metrics-server-values.yaml"]))]
     }
+
+    "longhorn" = {
+      chart            = "longhorn"
+      namespace        = "longhorn-system"
+      create_namespace = true
+      repository       = "https://charts.longhorn.io"
+      reuse_values     = true
+      wait             = true
+      version          = "1.6.2"
+      values           = []
+    }
+
   }
 }
