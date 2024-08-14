@@ -34,5 +34,15 @@ module "addons" {
       values           = []
     }
 
+    "rabbitmq-cluster-operator" = {
+      chart            = "rabbitmq-cluster-operator"
+      namespace        = "rabbitmq-cluster-operator"
+      create_namespace = true
+      repository       = "https://charts.bitnami.com/bitnami"
+      reuse_values     = true
+      wait             = true
+      version          = "4.3.18"
+      values           = []
+    }
   }
 }
