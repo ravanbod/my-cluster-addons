@@ -9,7 +9,7 @@ module "addons" {
       reuse_values     = true
       wait             = true
       version          = "4.11.1"
-      values           = []
+      values           = [file(join("", [path.module, "/values/", "ingress-nginx-values.yaml"]))]
     }
   }
 }
