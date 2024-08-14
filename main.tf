@@ -11,5 +11,16 @@ module "addons" {
       version          = "4.11.1"
       values           = [file(join("", [path.module, "/values/", "ingress-nginx-values.yaml"]))]
     }
+
+    "metrics-server" = {
+      chart            = "metrics-server"
+      namespace        = "kube-system"
+      create_namespace = false
+      repository       = "https://kubernetes-sigs.github.io/metrics-server"
+      reuse_values     = true
+      wait             = true
+      version          = "3.12.1"
+      values           = [file(join("", [path.module, "/values/", "metrics-server-values.yaml"]))]
+    }
   }
 }
