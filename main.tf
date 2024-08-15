@@ -55,5 +55,16 @@ module "addons" {
       version          = "v1.15.2"
       values           = [file(join("", [path.module, "/values/", "cert-manager-values.yaml"]))]
     }
+
+    "kube-prometheus-stack" = {
+      chart            = "kube-prometheus-stack"
+      namespace        = "kube-prometheus-stack"
+      create_namespace = true
+      repository       = "https://prometheus-community.github.io/helm-charts"
+      reuse_values     = true
+      wait             = true
+      version          = "61.9.0"
+      values           = []
+    }
   }
 }

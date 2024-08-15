@@ -30,6 +30,7 @@ The following Kubernetes addons are installed by the Terraform scripts in this r
 - **Kubernetes Metrics Server:** Scalable and efficient source of container resource metrics for Kubernetes built-in autoscaling pipelines
 - **Longhorn:** Cloud-Native distributed storage built on and for Kubernetes
 - **cert-manager:** Automatically provision and manage TLS certificates in Kubernetes
+- **kube-prometheus-stack:** collects Kubernetes manifests, Grafana dashboards, and Prometheus rules combined with documentation and scripts to provide easy to operate end-to-end Kubernetes cluster monitoring with Prometheus using the Prometheus Operator.
 
 Additional addons can be included as per your cluster requirements.
 
